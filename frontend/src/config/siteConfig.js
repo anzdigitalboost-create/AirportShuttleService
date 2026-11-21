@@ -15,7 +15,7 @@ const siteConfig = {
   email: EMAIL,
   phone: PHONE_TEL,
   phoneDisplay: PHONE_DISPLAY,
-  operator: 'Book A Ride NZ',
+  operator: 'Gap Digital',
   tagline: 'Private Auckland Airport Transfers',
   description:
     'Airport Shuttle Service runs private door-to-door transfers to and from Auckland Airport, 24/7. Flight tracking, free waiting time and a fixed price. Book online in 60 seconds.',
