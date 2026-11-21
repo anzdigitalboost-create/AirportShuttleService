@@ -1,0 +1,136 @@
+// English — the source locale for airportshuttleservice.co.nz. Every other
+// file in this folder must keep the same shape (same keys, same list lengths,
+// same {{placeholders}}); `npm run check:locales` enforces it before each
+// build. Interface copy shared with the sibling storefronts is in
+// ./shared/en.js.
+import shared from './shared/en.js'
+
+export default {
+  ...shared,
+  nav: { ...shared.nav, departures: 'To the Airport', arrivals: 'From the Airport' },
+  hero: {
+    badge: 'Auckland Airport · AKL',
+    title1: 'Airport shuttle service',
+    title2: 'to your door',
+    subtitle: 'Private transfers to and from Auckland Airport, 24 hours a day. Fixed price, flight tracked, no shared stops.',
+  },
+  home: {
+    boardTitle: 'Typical drive to AKL',
+    boardNote: 'Off-peak times. Allow more at rush hour.',
+    dirEyebrow: 'Choose your direction',
+    dirTitle: 'Flying Out or Flying In?',
+    dirs: [
+      { title: 'To the airport', text: 'Picked up at your door and dropped at departures, at the time you choose.' },
+      { title: 'From the airport', text: 'Met in the arrivals area when you land and driven straight home or to your hotel.' },
+    ],
+    incEyebrow: 'Every transfer',
+    incTitle: 'What Your Airport Shuttle Includes',
+    inc: [
+      { title: 'Flight tracking', text: 'We watch your flight and move the pickup if the time changes.' },
+      { title: 'Free waiting time', text: '30 minutes after domestic arrivals, 60 minutes after international arrivals.' },
+      { title: 'Private vehicle', text: 'Your group only. No other pickups on the way.' },
+      { title: 'Fixed price', text: 'Shown before you pay, GST included. No surge pricing.' },
+      { title: 'Free child seats', text: 'Infant, child and booster seats on request.' },
+      { title: '24-hour service', text: 'Every day of the year. Pickups from 11pm to 5:59am add a $15 night surcharge.' },
+    ],
+    faqTitle: 'Airport Shuttle Service FAQs',
+    faqs: [
+      { q: 'How much is an airport shuttle?', a: 'The price depends on your address and passenger numbers. Enter your trip on the booking page to see the fixed price before you pay.' },
+      { q: 'Which airport do you serve?', a: 'Auckland Airport, both the domestic and international terminals.' },
+      { q: 'How many passengers and bags fit?', a: 'Up to 11 passengers per vehicle with luggage. Trailers are available for oversized items and group bags.' },
+      { q: 'What is your cancellation policy?', a: 'Cancel more than 24 hours before pickup for a full refund.' },
+    ],
+  },
+  pages: {
+    departures: {
+      eyebrow: 'Departures',
+      title: 'Shuttle to',
+      accent: 'Auckland Airport',
+      lead: 'We collect you from home, your hotel or the office and take you to the terminal door. You pick the time; the price is fixed.',
+      timelineEyebrow: 'Planning your pickup',
+      timelineTitle: 'How to Time an Airport Departure',
+      timeline: [
+        { title: 'Check your flight', text: 'As a guide, be at the airport two hours before a domestic flight closes and three hours before an international departure.' },
+        { title: 'Add the drive', text: 'Use the travel times below for your area, and allow extra at morning and evening peaks.' },
+        { title: 'Book that pickup time', text: 'Enter it on the booking page with your address. The price appears straight away.' },
+        { title: 'Be ready at the door', text: 'Your driver arrives at the booked time and helps load the bags.' },
+      ],
+      areasEyebrow: 'Off-peak travel times',
+      areasTitle: 'Drive Times to Auckland Airport',
+      faqsTitle: 'Departure FAQs',
+      faqs: [
+        { q: 'Can you pick up very early in the morning?', a: 'Yes, at any hour. Pickups from 11pm to 5:59am add a $15 night surcharge, shown in the price before you pay.' },
+        { q: 'Do you drop at both the international and the domestic terminal?', a: 'Yes. Choose the terminal on the booking page.' },
+        { q: 'What if I am not ready when the driver arrives?', a: 'The driver waits up to 15 minutes. After that the driver may leave and the booking is not refunded, so please be ready at the booked time.' },
+      ],
+      ctaTitle: 'Price Your Shuttle to the Airport',
+    },
+    arrivals: {
+      eyebrow: 'Arrivals',
+      title: 'Shuttle from',
+      accent: 'Auckland Airport',
+      lead: 'Your driver is in the arrivals area when you land, whatever time the flight actually arrives, and takes you straight to your address.',
+      howEyebrow: 'After you land',
+      howTitle: 'How an Arrival Pickup Works',
+      how: [
+        { title: 'We track the flight', text: 'Give us your flight number when you book. An early or late arrival moves the pickup automatically.' },
+        { title: 'Your driver meets you', text: 'Look for your driver in the arrivals area. If you cannot find each other, call 022 355 2808.' },
+        { title: 'Straight to your door', text: 'No other passengers and no other stops between the terminal and your address.' },
+      ],
+      terminalsEyebrow: 'Free waiting time',
+      terminalsTitle: 'International and Domestic Arrivals',
+      terminals: [
+        { title: 'International arrivals', text: 'Passport control, baggage and biosecurity take time, so the waiting allowance is longer.', points: ['60 minutes free waiting', 'Counted from the scheduled landing time', 'Flight tracked for delays'] },
+        { title: 'Domestic arrivals', text: 'Domestic passengers are usually out of the terminal quickly.', points: ['30 minutes free waiting', 'Counted from the scheduled landing time', 'Flight tracked for delays'] },
+      ],
+      faqsTitle: 'Arrival FAQs',
+      faqs: [
+        { q: 'What happens if my flight is delayed?', a: 'We follow the flight and adjust the pickup at no extra charge.' },
+        { q: 'Can you take us to a hotel or a cruise ship?', a: 'Yes. We drive to any Auckland address, including city hotels and the cruise terminals at Queens Wharf and Princes Wharf.' },
+        { q: 'We have a lot of luggage. Is that a problem?', a: 'No. Enter your bag numbers when you book. For very large loads we add a luggage trailer.' },
+      ],
+      ctaTitle: 'Price Your Shuttle from the Airport',
+    },
+  },
+  area: {
+    eyebrow: '{{time}} to Auckland Airport, off-peak',
+    title: '{{name}}',
+    accent: 'Airport Shuttle Service',
+    lead: 'A private airport shuttle between {{name}} and Auckland Airport. One vehicle for your group, picked up at your door, for a fixed price.',
+    whyEyebrow: 'Why pre-book',
+    whyTitle: 'An Easier Airport Run From {{name}}',
+    points: [
+      { title: 'Door to door', text: 'We collect you from your address in {{name}} and drive straight to the terminal.' },
+      { title: 'Timed to your flight', text: 'The typical off-peak drive is {{time}}. We track your flight and plan around it.' },
+      { title: 'A fixed price', text: 'Enter your address on the booking page to see the price before you pay.' },
+    ],
+    suburbsEyebrow: 'Pickup suburbs',
+    suburbsTitle: 'Where We Pick Up in {{name}}',
+    suburbsText: 'These are examples. Any address in the area is covered.',
+    faqTitle: '{{name}} Airport Shuttle FAQs',
+    faqs: [
+      { q: 'How long is the drive from {{name}} to Auckland Airport?', a: 'Typically {{time}} off-peak. Allow more at morning and evening peaks.' },
+      { q: 'Which suburbs do you cover?', a: 'All of them, including {{suburbs}}.' },
+      { q: 'Is it a shared shuttle?', a: 'No. The vehicle is booked for your group only.' },
+    ],
+    otherEyebrow: 'Other areas',
+    otherTitle: 'Airport Shuttles Elsewhere in Auckland',
+    ctaTitle: 'Price Your {{name}} Airport Shuttle',
+    metaTitle: '{{name}} Airport Shuttle Service',
+    metaDesc: 'Private airport shuttle service between {{name}} and Auckland Airport. Typical drive {{time}} off-peak. Pickups in {{suburbs}} and nearby. Fixed price, flight tracking, book online.',
+  },
+  areas: {
+    'auckland-cbd': { name: 'Auckland CBD' },
+    'north-shore': { name: 'North Shore' },
+    'west-auckland': { name: 'West Auckland' },
+    'south-auckland': { name: 'South Auckland' },
+    'east-auckland': { name: 'East Auckland' },
+  },
+  meta: {
+    ...shared.meta,
+    siteTitle: 'Airport Shuttle Service — Auckland Airport, Door to Door',
+    home: { desc: 'Airport Shuttle Service runs private door-to-door transfers to and from Auckland Airport, 24/7. Flight tracking, free waiting time and a fixed price. Book online in 60 seconds.' },
+    departures: { title: 'Shuttle to Auckland Airport — Private Pickup', desc: 'Private shuttle to Auckland Airport from any Auckland address. Choose your pickup time, see a fixed price and be dropped at the terminal door.' },
+    arrivals: { title: 'Shuttle from Auckland Airport to Your Door', desc: 'Private shuttle from Auckland Airport to your door. Driver waiting in arrivals, flight tracked, 30 to 60 minutes of free waiting time and a fixed price.' },
+  },
+}
