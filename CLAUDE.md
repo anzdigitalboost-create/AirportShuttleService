@@ -26,7 +26,7 @@ per file.
   synced files + manifest, and ship.
 - Never "fix" a drift failure by editing the mirrored files on this side.
 - The mirrored files style themselves with `gold-*` Tailwind classes. In
-  `tailwind.config.js`, `gold` is deliberately aliased to this site's `brand`
+  `tailwind.config.js`, `gold` is deliberately aliased to the `booking`
   palette. Do not remove that alias.
 - This site's origins (www and apex) must be in `resolveFrontendOrigin()` in
   the platform's `api/_lib/payment-link.js`.
@@ -48,7 +48,7 @@ are this site's own.
   (`.card`, `.hero-surface`, `.btn-accent`, …). **The look lives in
   `src/styles/index.css` and `tailwind.config.js`** — restyle there, not by
   adding colour utilities to shared components.
-- Theme: terminal wayfinding: near-black `ink`, signage-yellow `sun` (backgrounds and dark surfaces only, never yellow text on light), azure `brand`, condensed uppercase (Barlow Condensed) headings, square corners, dark header (`darkHeader: true`).
+- Theme (owner's pick, design 12, 2026-11-21): brutalist — signal-yellow ground (`sun` / `paper`), black `ink` and `brand`, white panels with 4px black borders and hard offset shadows, Space Mono body, Archivo Black uppercase headings, yellow header (`darkHeader: false`). `gold` (the mirrored booking page's accent) points at the separate azure `booking` palette, not at `brand`, because that page has both white and near-black sections.
 - Logo: `src/components/Logo.jsx` (mark matches `public/favicon.svg`).
 
 ## Brand and content rules
