@@ -25,7 +25,7 @@ export default function Home() {
     <div>
       <PageMeta title={null} description={t('meta.home.desc')} />
 
-      {/* ── HERO: dark, with a departures-board of drive times ── */}
+      {/* ── HERO: yellow, with a drive-time board ── */}
       <section className="hero-surface overflow-hidden">
         <div className="container-max px-4 sm:px-6 lg:px-8 pt-14 pb-16 sm:pt-20 sm:pb-20">
           <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-12 lg:gap-14 items-center">
@@ -35,7 +35,7 @@ export default function Home() {
                   <Plane className="w-4 h-4" /> {t('hero.badge')}
                 </div>
               </motion.div>
-              <motion.h1 initial="hidden" animate="visible" custom={1} variants={fadeUp} className="hero-title text-5xl sm:text-6xl lg:text-7xl mb-7">
+              <motion.h1 initial="hidden" animate="visible" custom={1} variants={fadeUp} className="hero-title text-[2.6rem] sm:text-6xl lg:text-7xl mb-7">
                 {t('hero.title1')}
                 <br />
                 <span className="hero-accent">{t('hero.title2')}</span>
@@ -62,7 +62,7 @@ export default function Home() {
                   <span className="font-semibold">{t(`areas.${slug}.name`)}</span>
                   <span className="flex items-center gap-3">
                     <span className="board-time">{t('common.minutes', { range: a.driveTime })}</span>
-                    <ArrowRight className="w-4 h-4 text-white/50 group-hover:text-white group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </span>
                 </Link>
               ))}
@@ -71,8 +71,8 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Trust strip, in signage yellow */}
-        <div className="bg-sun text-ink">
+        {/* Trust strip */}
+        <div className="trust-strip">
           <ul className="container-max px-4 sm:px-6 lg:px-8 py-4 grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-3 text-sm font-bold">
             {chips.map(({ icon: Icon, label }) => (
               <li key={label} className="flex items-center gap-2.5">
@@ -114,7 +114,7 @@ export default function Home() {
       </section>
 
       {/* Live Google reviews of our operator */}
-      <GoogleReviews dark />
+      <GoogleReviews />
 
       {/* ── FAQ ─────────────────────────────────────────────── */}
       <section className="section-padding">

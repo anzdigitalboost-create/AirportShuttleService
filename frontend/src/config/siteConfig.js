@@ -11,7 +11,7 @@ const siteConfig = {
   domain: 'airportshuttleservice.co.nz',
   siteUrl: 'https://www.airportshuttleservice.co.nz',
   defaultTitle: 'Airport Shuttle Service — Auckland Airport, Door to Door',
-  darkHeader: true,
+  darkHeader: false,
   email: EMAIL,
   phone: PHONE_TEL,
   phoneDisplay: PHONE_DISPLAY,

@@ -1,11 +1,25 @@
 /** @type {import('tailwindcss').Config} */
 
-// Airport Shuttle Service palette — terminal wayfinding: near-black, signage
-// yellow and azure. Token names (brand / ink / sun) are shared with the
-// sibling storefronts so shared components re-theme without edits.
-// brand DEFAULT is 5.6:1 on white; `sun` is a background/dark-surface colour
-// only — never yellow text on a light background.
+// Airport Shuttle Service palette — brutalist: signal yellow, black, white.
+// Token names (brand / ink / sun / paper) are shared with the sibling
+// storefronts so shared components re-theme without edits.
+// `brand` is black here. `booking` is the azure the mirrored booking page
+// needs: that page has both white and near-black sections, so its accent
+// cannot be black (see `gold` below).
 const brand = {
+  DEFAULT: '#111111',
+  50: '#FFF9D6',
+  100: '#FFF2A8',
+  200: '#FFE14D',
+  300: '#F5D000',
+  400: '#111111',
+  500: '#000000',
+  600: '#000000',
+  700: '#000000',
+  800: '#000000',
+  900: '#000000',
+}
+const booking = {
   DEFAULT: '#1D5FD1',
   50: '#EEF4FF',
   100: '#DBE7FE',
@@ -40,15 +54,15 @@ export default {
         brand,
         // The mirrored booking page (copied verbatim from bookaride.co.nz and
         // never edited here) styles itself with `gold-*` classes. Pointing
-        // `gold` at the brand palette re-themes it without touching the files.
-        gold: brand,
-        ink: { DEFAULT: '#0B0D12', 800: '#151922', 700: '#3A4150' },
-        sun: { DEFAULT: '#FFD100', 600: '#E6BC00' },
-        paper: { DEFAULT: '#F4F5F7', 200: '#E9EBEF', 300: '#D5D9E0' },
+        // `gold` at a palette here re-themes it without touching the files.
+        gold: booking,
+        ink: { DEFAULT: '#000000', 800: '#111111', 700: '#222222' },
+        sun: { DEFAULT: '#FFE14D', 600: '#F5D000' },
+        paper: { DEFAULT: '#FFE14D', 200: '#FFF2A8', 300: '#000000' },
       },
       fontFamily: {
-        sans: ['Barlow', 'system-ui', '-apple-system', 'sans-serif'],
-        display: ['"Barlow Condensed"', 'Barlow', 'system-ui', 'sans-serif'],
+        sans: ['"Space Mono"', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
+        display: ['"Archivo Black"', 'Impact', 'system-ui', 'sans-serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-out',
