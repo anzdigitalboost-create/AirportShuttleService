@@ -5,10 +5,10 @@ export default {
   ...shared,
   nav: { ...shared.nav, departures: '공항으로', arrivals: '공항에서' },
   hero: {
-    badge: '오클랜드 공항 · AKL',
-    title1: '공항 셔틀 서비스',
-    title2: '집 앞까지',
-    subtitle: '오클랜드 공항을 오가는 전용 이동 서비스를 하루 24시간 제공합니다. 고정 요금, 항공편 추적, 합승 정차 없음.',
+    badge: "매일 24시간 운행",
+    title1: "모두를 목적지까지 모시는 ",
+    title2: "가장 쉬운 방법",
+    subtitle: "오클랜드 전역과 오클랜드 공항을 오가는 전용 이동 서비스를 하루 24시간 제공합니다. 차량 한 대, 고정 요금 하나, 합승 정차 없음.",
   },
   home: {
     boardTitle: 'AKL까지 일반 소요 시간',

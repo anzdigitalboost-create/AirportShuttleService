@@ -5,10 +5,10 @@ export default {
   ...shared,
   nav: { ...shared.nav, departures: "Vers l'aéroport", arrivals: "Depuis l'aéroport" },
   hero: {
-    badge: "Aéroport d'Auckland · AKL",
-    title1: "Service de navette aéroport",
-    title2: "jusqu'à votre porte",
-    subtitle: "Transferts privés depuis et vers l'aéroport d'Auckland, 24 heures sur 24. Prix fixe, vol suivi, aucun arrêt partagé.",
+    badge: "En service 24 heures sur 24, tous les jours",
+    title1: "Le moyen simple d'emmener ",
+    title2: "tout le monde à destination",
+    subtitle: "Transferts privés dans tout Auckland et vers l'aéroport d'Auckland, 24 heures sur 24. Un véhicule, un prix fixe, aucun arrêt partagé.",
   },
   home: {
     boardTitle: "Trajet habituel vers AKL",

@@ -3,139 +3,142 @@
 @tailwind utilities;
 
 /*
- * Airport Shuttle Service theme — brutalist: signal-yellow ground, black
- * 4px rules, white panels with hard offset shadows, monospace body and a
- * heavy uppercase display face. The shared components
- * (src/components/Sections.jsx, layout/*) only use the semantic classes
- * defined here, so this file is the site's look.
+ * Airport Shuttle Service theme — soft and rounded: lavender ground, indigo
+ * accent, white pill header, big-radius pastel panels, heavy rounded sans.
+ * The shared components (src/components/Sections.jsx, layout/*) only use the
+ * semantic classes defined here, so this file is the site's look.
  */
 
 :root {
   --background: 0 0% 100%;
-  --foreground: 0 0% 0%;
+  --foreground: 244 40% 21%;
   --card: 0 0% 100%;
-  --card-foreground: 0 0% 0%;
+  --card-foreground: 244 40% 21%;
   --popover: 0 0% 100%;
-  --popover-foreground: 0 0% 0%;
-  --primary: 0 0% 0%;
-  --primary-foreground: 0 0% 100%;
-  --secondary: 51 100% 92%;
-  --secondary-foreground: 0 0% 0%;
-  --muted: 0 0% 96%;
-  --muted-foreground: 0 0% 27%;
-  --accent: 51 100% 92%;
-  --accent-foreground: 0 0% 0%;
+  --popover-foreground: 244 40% 21%;
+  --primary: 244 40% 21%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 252 100% 97%;
+  --secondary-foreground: 244 40% 21%;
+  --muted: 252 100% 97%;
+  --muted-foreground: 243 30% 37%;
+  --accent: 252 100% 97%;
+  --accent-foreground: 244 40% 21%;
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 0 0% 98%;
-  --border: 0 0% 80%;
-  --input: 0 0% 80%;
-  --ring: 218 76% 47%;
-  --radius: 0rem;
+  --border: 248 100% 90%;
+  --input: 248 100% 90%;
+  --ring: 245 65% 54%;
+  --radius: 1rem;
 }
 
 @layer base {
-  body { @apply bg-sun text-ink font-sans; }
+  body { @apply bg-paper text-ink font-sans; }
 }
 
 @layer components {
-  .section-padding { @apply px-4 sm:px-6 lg:px-8 py-16 sm:py-24; }
+  .section-padding { @apply px-4 sm:px-6 lg:px-8 py-16 sm:py-20; }
   .container-max { @apply max-w-6xl mx-auto; }
-  .band-alt { @apply bg-white border-y-4 border-ink; }
+  .band-alt { @apply bg-white; }
 
   /* Buttons */
   .btn-primary, .btn-accent, .btn-ghost, .btn-outline, .btn-cta-ghost {
-    @apply inline-flex items-center justify-center gap-2 px-6 py-3.5 font-bold uppercase border-4 border-ink transition-transform duration-150;
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 font-extrabold rounded-full transition-colors duration-200;
   }
-  .btn-accent { @apply bg-white text-ink shadow-[6px_6px_0_#000]; }
-  .btn-accent:hover { @apply translate-x-[3px] translate-y-[3px] shadow-[3px_3px_0_#000]; }
-  .btn-primary { @apply bg-ink text-white hover:bg-white hover:text-ink; }
-  .btn-ghost { @apply bg-ink text-white hover:bg-white hover:text-ink; }
-  .btn-outline { @apply bg-white text-ink hover:bg-ink hover:text-white; }
-  .btn-cta-ghost { @apply border-white text-white hover:bg-white hover:text-ink; }
-  .cta-band .btn-accent { @apply bg-sun border-sun shadow-[6px_6px_0_#fff]; }
-  .cta-band .btn-accent:hover { @apply shadow-[3px_3px_0_#fff]; }
-  .sticky-bar .btn-accent { @apply shadow-none translate-x-0 translate-y-0 normal-case text-xs leading-tight; }
-  .btn-header { @apply bg-ink hover:bg-white hover:text-ink text-sun font-bold uppercase border-4 border-ink px-4 py-2 text-sm whitespace-nowrap transition-colors; }
+  .btn-primary { @apply bg-brand text-white hover:bg-brand-500; }
+  .btn-accent { @apply bg-brand text-white hover:bg-brand-500; }
+  .btn-ghost { @apply border-2 border-ink text-ink hover:bg-ink hover:text-white; }
+  .btn-outline { @apply border-2 border-brand text-brand hover:bg-brand hover:text-white; }
+  .btn-cta-ghost { @apply border-2 border-white/60 text-white hover:bg-white/10; }
+  .cta-band .btn-accent { @apply bg-white text-ink hover:bg-paper-200; }
+  .btn-header { @apply bg-brand hover:bg-brand-500 text-white font-extrabold px-5 py-2.5 rounded-full text-sm whitespace-nowrap transition-colors; }
 
-  /* Header */
-  .site-header { @apply bg-sun border-b-4 border-ink; }
-  .nav-link { @apply px-3 py-2 text-[13px] font-bold uppercase text-ink whitespace-nowrap border-b-4 border-transparent; }
-  .nav-link:hover, .nav-link.is-active { @apply border-ink; }
-  .header-phone { @apply items-center gap-2 text-sm font-bold text-ink whitespace-nowrap; }
-  .menu-toggle { @apply p-2 text-ink bg-white border-4 border-ink; }
-  .mobile-menu { @apply bg-sun border-t-4 border-ink; }
-  .mobile-link { @apply block px-4 py-3 text-sm font-bold uppercase text-ink border-b-2 border-ink/20; }
-  .mobile-link.is-active { @apply bg-ink text-sun; }
+  /* Header: a white pill floating on the lavender ground (sizes are set
+     outside the layers at the end of this file). */
+  .site-header { @apply bg-paper; }
+  .nav-link { @apply px-3 py-2 text-[15px] font-bold text-ink-700 whitespace-nowrap rounded-full hover:text-ink hover:bg-paper transition-colors; }
+  .nav-link.is-active { @apply text-brand bg-paper; }
+  .header-phone { @apply items-center gap-2 text-sm font-extrabold text-ink whitespace-nowrap hover:text-brand transition-colors; }
+  .menu-toggle { @apply p-2.5 rounded-full text-ink bg-paper hover:bg-paper-200 transition-colors; }
+  .mobile-menu { @apply bg-white rounded-3xl mt-2 shadow-lg; }
+  .mobile-link { @apply block px-4 py-3 text-[15px] font-bold text-ink-700 rounded-2xl hover:bg-paper; }
+  .mobile-link.is-active { @apply text-brand bg-paper; }
 
   /* Hero */
-  .hero-surface { @apply bg-sun text-ink border-b-4 border-ink; }
-  .hero-chip { @apply inline-flex items-center gap-2 bg-ink text-sun text-xs font-bold uppercase tracking-wider px-3 py-1.5; }
-  .hero-title { @apply font-display uppercase text-ink leading-[0.95] tracking-tight; overflow-wrap: break-word; }
-  .hero-accent { @apply text-ink underline decoration-white decoration-[6px] underline-offset-4; }
-  .hero-lead { @apply text-ink leading-relaxed; }
+  .hero-surface { @apply bg-paper; }
+  .hero-chip { @apply inline-flex items-center gap-2 bg-white text-brand text-sm font-extrabold px-4 py-2 rounded-full; }
+  .hero-title { @apply font-display font-black text-ink leading-[1.06] tracking-tight; }
+  .hero-accent { @apply text-brand; }
+  .hero-lead { @apply text-ink-700 leading-relaxed; }
 
   /* Section text */
-  .eyebrow { @apply inline-block bg-ink text-white text-xs font-bold uppercase tracking-wider px-2 py-1; }
-  .section-title { @apply font-display uppercase text-ink tracking-tight leading-none; overflow-wrap: break-word; }
+  .eyebrow { @apply inline-block bg-white text-brand text-sm font-extrabold px-3.5 py-1.5 rounded-full; }
+  .band-alt .eyebrow { @apply bg-paper; }
+  .section-title { @apply font-display font-black text-ink tracking-tight; }
   .section-lead { @apply text-ink-700 leading-relaxed; }
-  .icon-brand { @apply text-ink; }
+  .icon-brand { @apply text-brand; }
 
-  /* Cards */
-  .card { @apply bg-white border-4 border-ink p-6 shadow-[8px_8px_0_#000]; }
-  .card-lg { @apply p-7 sm:p-9; }
-  .card-link { @apply cursor-pointer transition-transform duration-150; }
-  .card-link:hover { @apply translate-x-[4px] translate-y-[4px] shadow-[4px_4px_0_#000]; }
-  .card-featured { @apply bg-ink text-white; }
-  .card-featured .card-title { @apply text-white; }
-  .card-featured .card-text { @apply text-white; }
-  .card-featured .card-action { @apply text-sun; }
-  .card-icon { @apply w-12 h-12 bg-sun text-ink border-4 border-ink flex items-center justify-center mb-5; }
-  .card-icon-solid { @apply bg-ink text-sun; }
-  .card-featured .card-icon { @apply bg-sun text-ink border-sun; }
-  .card-title { @apply font-display text-xl uppercase text-ink mb-2 leading-tight; overflow-wrap: break-word; }
-  .card-text { @apply text-ink-700 text-[15px] leading-relaxed; }
-  .card-action { @apply inline-flex items-center gap-2 font-bold uppercase text-ink underline underline-offset-4; }
-  .check-row { @apply flex items-start gap-2.5 text-ink-700 text-[15px]; }
-  .check-row svg { @apply text-ink mt-0.5; }
-  .pill { @apply inline-flex items-center gap-2 bg-white border-2 border-ink px-3 py-2 text-sm font-bold text-ink; }
-  .photo { @apply border-4 border-ink shadow-[8px_8px_0_#000]; }
+  /* Cards: pastel panels, cycling mint / peach / sky */
+  .card { @apply bg-white rounded-[2rem] p-7; }
+  .band-alt .card { @apply bg-paper; }
+  .card:nth-child(3n+1) { @apply bg-mint; }
+  .card:nth-child(3n+2) { @apply bg-sun; }
+  .card:nth-child(3n) { @apply bg-sky; }
+  .card-lg { @apply p-8 sm:p-10; }
+  .card-link { @apply cursor-pointer transition-transform duration-200; }
+  .card-link:hover { @apply -translate-y-1; }
+  .card-icon { @apply w-[52px] h-[52px] rounded-[18px] bg-white text-brand flex items-center justify-center mb-5; }
+  .card-icon-solid { @apply bg-brand text-white; }
+  .card-title { @apply font-display text-2xl font-black text-ink mb-2; }
+  .card-text { @apply text-ink-800 leading-relaxed; }
+  .card-action { @apply inline-flex items-center gap-2 font-extrabold text-brand transition-all; }
+  .check-row { @apply flex items-start gap-2.5 text-ink-800; }
+  .check-row svg { @apply text-brand mt-0.5; }
+  .pill { @apply inline-flex items-center gap-2 bg-white rounded-full px-[18px] py-2.5 text-[15px] font-extrabold text-ink-800; }
+  .band-alt .pill { @apply bg-paper; }
+  .pill svg { @apply text-brand; }
+  .photo { @apply rounded-[2rem]; }
 
   /* Steps */
-  .step { @apply bg-white border-4 border-ink p-6 shadow-[8px_8px_0_#000]; }
-  .step-number { @apply inline-flex items-center justify-center w-11 h-11 bg-ink text-sun font-display text-xl mb-4; }
-  .step-title { @apply font-display text-lg uppercase text-ink mb-2 leading-tight; }
-  .step-text { @apply text-ink-700 text-[15px] leading-relaxed; }
+  .step { @apply bg-white rounded-[2rem] p-7; }
+  .band-alt .step { @apply bg-paper; }
+  .step-number { @apply inline-flex items-center justify-center w-11 h-11 rounded-full bg-brand text-white font-black text-lg mb-4; }
+  .step-title { @apply font-display text-xl font-black text-ink mb-2; }
+  .step-text { @apply text-ink-700 leading-relaxed; }
 
   /* FAQ */
-  .faq-item { @apply bg-white border-4 border-ink px-5 py-4; }
-  .faq-item summary { @apply font-bold text-ink; }
-  .faq-chevron { @apply text-ink; }
-  .faq-answer { @apply text-ink-700 text-[15px] leading-relaxed; }
+  .faq-item { @apply bg-white rounded-3xl px-6 py-5; }
+  .band-alt .faq-item { @apply bg-paper; }
+  .faq-item summary { @apply text-lg font-extrabold text-ink; }
+  .faq-chevron { @apply text-brand; }
+  .faq-answer { @apply text-ink-700 leading-relaxed; }
 
   /* Areas */
-  .area-list { @apply bg-white border-4 border-ink shadow-[8px_8px_0_#000] divide-y-2 divide-ink; }
-  .area-row { @apply flex items-center justify-between gap-4 px-5 py-4 text-ink font-bold hover:bg-sun; }
-  .area-row > span:last-child { @apply font-display text-lg whitespace-nowrap; }
-  .area-chip { @apply flex items-center justify-between gap-3 bg-white border-4 border-ink px-4 py-3 font-bold uppercase text-sm text-ink hover:bg-ink hover:text-sun; }
-
-  /* Home: drive-time board */
-  .board { @apply bg-white border-4 border-ink shadow-[10px_10px_0_#000]; }
-  .board-head { @apply flex items-center justify-between gap-3 px-5 py-3 bg-ink text-sun text-xs font-bold uppercase tracking-wider; }
-  .board-row { @apply flex items-center justify-between gap-4 px-5 py-3.5 border-t-2 border-ink text-ink font-bold hover:bg-sun transition-colors; }
-  .board-time { @apply font-display text-xl whitespace-nowrap; }
-  .board-note { @apply px-5 py-3 border-t-2 border-ink text-xs text-ink-700; }
-  .trust-strip { @apply bg-ink text-sun; }
+  .area-list { @apply bg-white rounded-[2rem] overflow-hidden divide-y divide-paper-200; }
+  .band-alt .area-list { @apply bg-paper divide-white; }
+  .area-row { @apply flex items-center justify-between gap-4 px-6 py-5 text-ink font-bold hover:bg-paper-200; }
+  .area-row svg { @apply text-brand; }
+  .area-row > span:last-child { @apply font-extrabold text-brand whitespace-nowrap; }
+  .area-chip { @apply flex items-center justify-between gap-3 bg-white rounded-full px-6 py-4 font-extrabold text-ink hover:bg-paper-200; }
+  .band-alt .area-chip { @apply bg-paper; }
 
   /* CTA band, footer, mobile bar */
-  .cta-band { @apply bg-ink text-white border-t-4 border-ink; }
-  .cta-title { @apply font-display uppercase text-sun tracking-tight leading-none; }
-  .cta-text { @apply text-white; }
-  .footer-surface { @apply bg-ink text-neutral-200 border-t-4 border-sun; }
+  .cta-band { @apply bg-brand-600 text-white; }
+  .cta-title { @apply font-display font-black text-white tracking-tight; }
+  .cta-text { @apply text-white/90; }
+  .footer-surface { @apply bg-ink text-indigo-100/85; }
   .footer-strong { @apply text-white; }
-  .footer-muted { @apply text-neutral-300; }
-  .footer-link { @apply text-neutral-200 hover:text-sun underline-offset-4 hover:underline; }
-  .footer-icon { @apply text-sun; }
-  .footer-rule { @apply border-t border-white/25; }
-  .sticky-bar { @apply bg-sun border-t-4 border-ink; }
-  .sticky-call { @apply border-4 border-ink bg-white text-ink; }
+  .footer-muted { @apply text-indigo-100/75; }
+  .footer-link { @apply text-indigo-100/85 hover:text-white transition-colors; }
+  .footer-icon { @apply text-brand-300; }
+  .footer-rule { @apply border-t border-white/10; }
+  .sticky-bar { @apply bg-white/95 backdrop-blur-md shadow-[0_-4px_20px_rgba(35,32,74,0.10)]; }
+  .sticky-call { @apply rounded-full border-2 border-ink text-ink; }
 }
+
+/* Pill header geometry. Unlayered on purpose: the shared Header markup sets
+   its own height and padding with utilities, and these must win. The outer
+   bar stays 72px tall in total (8px gap + 64px pill) to match the layout. */
+.site-header { padding: 8px 12px 0; }
+.site-header > nav { height: 64px; max-width: 1100px; background: #fff; border-radius: 9999px; padding-left: 24px; padding-right: 10px; }
+.site-header.is-scrolled > nav { box-shadow: 0 6px 20px rgba(35, 32, 74, 0.10); }

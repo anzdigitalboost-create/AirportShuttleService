@@ -5,10 +5,10 @@ export default {
   ...shared,
   nav: { ...shared.nav, departures: "Al aeropuerto", arrivals: "Desde el aeropuerto" },
   hero: {
-    badge: "Aeropuerto de Auckland · AKL",
-    title1: "Servicio de shuttle al aeropuerto",
-    title2: "hasta su puerta",
-    subtitle: "Traslados privados desde y hacia el aeropuerto de Auckland, las 24 horas del día. Precio fijo, vuelo seguido, sin paradas compartidas.",
+    badge: "En servicio las 24 horas, todos los días",
+    title1: "La forma fácil de llevar ",
+    title2: "a todos a su destino",
+    subtitle: "Traslados privados por todo Auckland y al aeropuerto de Auckland, las 24 horas del día. Un vehículo, un precio fijo, sin paradas compartidas.",
   },
   home: {
     boardTitle: "Trayecto habitual a AKL",
