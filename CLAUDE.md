@@ -48,7 +48,7 @@ are this site's own.
   (`.card`, `.hero-surface`, `.btn-accent`, …). **The look lives in
   `src/styles/index.css` and `tailwind.config.js`** — restyle there, not by
   adding colour utilities to shared components.
-- Theme (owner's pick, design 12, 2026-11-21): brutalist — signal-yellow ground (`sun` / `paper`), black `ink` and `brand`, white panels with 4px black borders and hard offset shadows, Space Mono body, Archivo Black uppercase headings, yellow header (`darkHeader: false`). `gold` (the mirrored booking page's accent) points at the separate azure `booking` palette, not at `brand`, because that page has both white and near-black sections.
+- Theme (owner's pick, design 05, 2026-11-21 — replaces design 12 chosen earlier the same day): soft and rounded — lavender ground (`paper`), indigo `brand`, dark indigo `ink`, pastel panels (`mint`, `sun` peach, `sky`) with large radii, Nunito throughout, white pill header (`darkHeader: false`; its geometry is the unlayered block at the end of `index.css`). The home hero copy (badge, headline, subtitle) is the wording of that design and was approved by the owner. `gold` (the mirrored booking page's accent) points at the lighter-indigo `booking` palette, not at `brand`, because that page has both white and near-black sections.
 - Logo: `src/components/Logo.jsx` (mark matches `public/favicon.svg`).
 
 ## Brand and content rules

@@ -1,37 +1,25 @@
 /** @type {import('tailwindcss').Config} */
 
-// Airport Shuttle Service palette — brutalist: signal yellow, black, white.
-// Token names (brand / ink / sun / paper) are shared with the sibling
-// storefronts so shared components re-theme without edits.
-// `brand` is black here. `booking` is the azure the mirrored booking page
-// needs: that page has both white and near-black sections, so its accent
-// cannot be black (see `gold` below).
+// Airport Shuttle Service palette — soft and rounded: lavender ground,
+// indigo, pastel panels. Token names (brand / ink / sun / paper) are shared
+// with the sibling storefronts so shared components re-theme without edits.
+// brand DEFAULT is 7.0:1 on white and at least 5.7:1 on every pastel below.
+// `booking` is the lighter indigo the mirrored booking page uses: that page
+// has both white and near-black sections, and this shade reads on both.
 const brand = {
-  DEFAULT: '#111111',
-  50: '#FFF9D6',
-  100: '#FFF2A8',
-  200: '#FFE14D',
-  300: '#F5D000',
-  400: '#111111',
-  500: '#000000',
-  600: '#000000',
-  700: '#000000',
-  800: '#000000',
-  900: '#000000',
+  DEFAULT: '#4B3FD6',
+  50: '#F3F0FF',
+  100: '#E7E2FF',
+  200: '#D3CCFF',
+  300: '#B4AAFA',
+  400: '#4B3FD6',
+  500: '#3F34BD',
+  600: '#332A9C',
+  700: '#23204A',
+  800: '#1A1838',
+  900: '#121026',
 }
-const booking = {
-  DEFAULT: '#1D5FD1',
-  50: '#EEF4FF',
-  100: '#DBE7FE',
-  200: '#BFD3FE',
-  300: '#93B4FD',
-  400: '#1D5FD1',
-  500: '#1A4FB0',
-  600: '#153F8C',
-  700: '#11326F',
-  800: '#0D2552',
-  900: '#081836',
-}
+const booking = { ...brand, DEFAULT: '#6558F0', 400: '#6558F0', 500: '#5346D8' }
 
 export default {
   content: ['./index.html', './src/**/*.{js,jsx}'],
@@ -56,13 +44,15 @@ export default {
         // never edited here) styles itself with `gold-*` classes. Pointing
         // `gold` at a palette here re-themes it without touching the files.
         gold: booking,
-        ink: { DEFAULT: '#000000', 800: '#111111', 700: '#222222' },
-        sun: { DEFAULT: '#FFE14D', 600: '#F5D000' },
-        paper: { DEFAULT: '#FFE14D', 200: '#FFF2A8', 300: '#000000' },
+        ink: { DEFAULT: '#23204A', 800: '#35325F', 700: '#45427A' },
+        sun: { DEFAULT: '#FFE9C7', 600: '#FFD999' },
+        mint: '#DDF5E8',
+        sky: '#DCE8FF',
+        paper: { DEFAULT: '#F3F0FF', 200: '#E7E2FF', 300: '#D3CCFF' },
       },
       fontFamily: {
-        sans: ['"Space Mono"', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
-        display: ['"Archivo Black"', 'Impact', 'system-ui', 'sans-serif'],
+        sans: ['Nunito', 'system-ui', '-apple-system', 'sans-serif'],
+        display: ['Nunito', 'system-ui', '-apple-system', 'sans-serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-out',

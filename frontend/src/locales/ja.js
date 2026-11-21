@@ -5,10 +5,10 @@ export default {
   ...shared,
   nav: { ...shared.nav, departures: '空港へ', arrivals: '空港から' },
   hero: {
-    badge: 'オークランド空港 · AKL',
-    title1: '空港シャトルサービス',
-    title2: 'ご自宅の玄関まで',
-    subtitle: 'オークランド空港発着の貸切送迎を24時間ご提供します。固定料金、フライト追跡、相乗りの立ち寄りなし。',
+    badge: "24時間、毎日運行",
+    title1: "みんなを目的地へ届ける",
+    title2: "いちばん簡単な方法",
+    subtitle: "オークランド全域とオークランド空港への貸切送迎を24時間ご提供します。車両1台、固定料金、相乗りの立ち寄りなし。",
   },
   home: {
     boardTitle: 'AKL までの所要時間の目安',

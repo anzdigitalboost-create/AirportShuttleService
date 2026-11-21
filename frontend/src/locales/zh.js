@@ -5,10 +5,10 @@ export default {
   ...shared,
   nav: { ...shared.nav, departures: '前往机场', arrivals: '机场接机' },
   hero: {
-    badge: '奥克兰机场 · AKL',
-    title1: '机场接驳车服务',
-    title2: '直达您家门口',
-    subtitle: '往返奥克兰机场的私人接送，每天 24 小时服务。固定价格，航班跟踪，不拼车、不绕路。',
+    badge: "每天 24 小时运营",
+    title1: "轻松出行，把",
+    title2: "每个人都送到",
+    subtitle: "覆盖奥克兰全境及往返奥克兰机场的私人接送，每天 24 小时服务。一辆车，一个固定价格，不拼车、不绕路。",
   },
   home: {
     boardTitle: '到 AKL 的一般车程',
